@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<style>
+    body {
+        background-color: #F1570A; /* Color de fondo inicial */
+    }
+</style>
+<body>
+    <button onclick="cambiarColor()">Cambiar Color</button>
+
+    <script>
+        function cambiarColor() {
+            var body = document.getElementsByTagName("body")[0];
+            var color = generarColorAleatorio();
+            body.style.backgroundColor = color;
+        }
+
+        function generarColorAleatorio() {
+            var letras = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letras[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        
+    </script>
+    <h1><center>NataKong el Dios</center></h1>
+    <h2><center>Nathanahel Ruben Cano Monge, conocido como Natanael Cano, es un cantautor y rapero mexicano. Se especializa en el subgenero de corridos tumbados, ademas de ser acreditado como creador y precursor del mismo.</center></h2>
+    <p><center>Algunos de sus exitos</center></p>
+    <center></center><p><center><ul>
+        <li>AMG</li>
+        <li>AMOR TUMBADO</li>
+        <li>PRC</li>
+        <li>PORTE EXUBERANTE</li>
+    </ul></center></p></center>
+
+
+
+    <center><img id="nata" src="" alt="Imagen" style="width:500px"></center>
+    <center><button onclick="anterior()">Anterior</button><button onclick="siguiente()">Siguiente</button></center>
+    
+    <script>
+    // array de urls de imágenes
+    var imagenNata = [
+        'https://phantom-marca-mx.unidadeditorial.es/1f51ba9d2dd327fd9c6f31e08343ab58/resize/1320/f/jpg/mx/assets/multimedia/imagenes/2023/03/28/16800357718386.jpg', 
+        'https://i.scdn.co/image/ab6761610000e5eb3e0a5fbc871b4020abb789d7',
+        'https://www.elsoldehermosillo.com.mx/gossip/celebridades/plm65n-natanaelcano-cantante-sonorense/ALTERNATES/LANDSCAPE_768/NatanaelCano-Cantante-sonorense',
+        'https://media.gq.com.mx/photos/64498fcb2f52f48c1a2e05cb/master/pass/Natanael_Cano_cantante-corridos_tumbados_1422683670.jpg',
+        'https://www.elfinanciero.com.mx/resizer/Gb9_5FGHoThGxOjnXEQA0HUUEqM=/1440x810/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/elfinanciero/L22ZLBEPGBFV7JMNURCP443D5Q.jpg'
+    ];
+    
+    var inicio = 0; // para controlar el índice actual de la imagen
+    
+    document.getElementById('nata').src = imagenNata[0]; // mostrar la primera imagen al cargar la página
+    
+    // función para mostrar la imagen anterior
+    function anterior() {
+        if (inicio === 0) {
+            inicio = imagenNata.length - 1; // si estamos en la primera imagen, vamos a la última
+        } else {
+            inicio--; // si no, vamos a la imagen anterior
+        }
+        document.getElementById('nata').src = imagenNata[inicio]; // actualizamos la imagen
+    }
+    
+    // función para mostrar la siguiente imagen
+    function siguiente() {
+        if (inicio === imagenNata.length - 1) {
+            inicio = 0; // si estamos en la última imagen, vamos a la primera
+        } else {
+            inicio++; // si no, vamos a la siguiente imagen
+        }
+        document.getElementById('nata').src = imagenNata[inicio]; // actualizamos la imagen
+    }
+    </script>
+    <p id="texto">El es el mejor del mundo</p>
+ <button onclick="cambiarTexto()">Cambiar texto</button>
+    <script>
+        var nuevoTexto = "¿No te quedo claro? EL MEJOR DEL MUNDOOOO";
+
+ function cambiarTexto() {
+  var elemento = document.getElementById("texto");
+  elemento.textContent = nuevoTexto;
+}
+</script>
+<h2 id="mensaje">Hola mundo</h2>
+<button onclick="ocultarMensaje()">Ocultar mensaje</button>
+<script>
+    function ocultarMensaje() {
+  var elementoMensaje = document.getElementById("mensaje");
+  elementoMensaje.style.display = "none";
+}
+</script>
+<div id="miDiv"></div>
+<button onclick="escribirTexto()">Escribir mensaje</button>
+<script>
+    function escribirTexto() {
+  var miDiv = document.getElementById("miDiv");
+  miDiv.innerHTML = "<h1>Este texto no lo escribio tuNombre, lo escribio JavaScript</h1>";
+}
+</script>
+</body>
+</html>
