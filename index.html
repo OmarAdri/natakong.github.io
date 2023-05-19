@@ -10,7 +10,7 @@
 </head>
 <style>
     body {
-        background-color: #F1570A; /* Color de fondo inicial */
+        background-color: #F1570A; 
     }
 </style>
 <body>
@@ -63,7 +63,6 @@
     <center><button onclick="anterior()">Anterior</button><button onclick="siguiente()">Siguiente</button></center>
     
     <script>
-    // array de urls de imágenes
     var imagenNata = [
         'https://phantom-marca-mx.unidadeditorial.es/1f51ba9d2dd327fd9c6f31e08343ab58/resize/1320/f/jpg/mx/assets/multimedia/imagenes/2023/03/28/16800357718386.jpg', 
         'https://i.scdn.co/image/ab6761610000e5eb3e0a5fbc871b4020abb789d7',
@@ -72,28 +71,28 @@
         'https://www.elfinanciero.com.mx/resizer/Gb9_5FGHoThGxOjnXEQA0HUUEqM=/1440x810/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/elfinanciero/L22ZLBEPGBFV7JMNURCP443D5Q.jpg'
     ];
     
-    var inicio = 0; // para controlar el índice actual de la imagen
+    var inicio = 0; 
     
-    document.getElementById('nata').src = imagenNata[0]; // mostrar la primera imagen al cargar la página
+    document.getElementById('nata').src = imagenNata[0]; 
     
-    // función para mostrar la imagen anterior
+    
     function anterior() {
         if (inicio === 0) {
-            inicio = imagenNata.length - 1; // si estamos en la primera imagen, vamos a la última
+            inicio = imagenNata.length - 1; 
         } else {
-            inicio--; // si no, vamos a la imagen anterior
+            inicio--; 
         }
-        document.getElementById('nata').src = imagenNata[inicio]; // actualizamos la imagen
+        document.getElementById('nata').src = imagenNata[inicio]; 
     }
     
-    // función para mostrar la siguiente imagen
+    
     function siguiente() {
         if (inicio === imagenNata.length - 1) {
-            inicio = 0; // si estamos en la última imagen, vamos a la primera
+            inicio = 0; 
         } else {
-            inicio++; // si no, vamos a la siguiente imagen
+            inicio++;
         }
-        document.getElementById('nata').src = imagenNata[inicio]; // actualizamos la imagen
+        document.getElementById('nata').src = imagenNata[inicio]; 
     }
     </script>
     <p id="texto">El es el mejor del mundo</p>
