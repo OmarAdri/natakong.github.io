@@ -44,6 +44,20 @@
     </ul></center></p></center>
 
 
+    <img id="imagen" src="https://i.scdn.co/image/ab6761610000e5eb3e0a5fbc871b4020abb789d7" alt="" height="360 px">
+<button onclick="cambiarAtributo()">Cambiar imagen</button>
+<button onclick="restaurarImagen()">Restaurar imagen</button>
+<script>
+    function cambiarAtributo() {
+            document.getElementById("imagen").src = "https://www.elsoldehermosillo.com.mx/gossip/celebridades/plm65n-natanaelcano-cantante-sonorense/ALTERNATES/LANDSCAPE_768/NatanaelCano-Cantante-sonorense";
+        }
+
+        function restaurarImagen() {
+            document.getElementById("imagen").src = "https://i.scdn.co/image/ab6761610000e5eb3e0a5fbc871b4020abb789d7";
+        }
+ </script>
+    
+    
 
     <center><img id="nata" src="" alt="Imagen" style="width:500px"></center>
     <center><button onclick="anterior()">Anterior</button><button onclick="siguiente()">Siguiente</button></center>
@@ -105,7 +119,7 @@
 <script>
     function escribirTexto() {
   var miDiv = document.getElementById("miDiv");
-  miDiv.innerHTML = "<h1>Este texto no lo escribio tuNombre, lo escribio JavaScript</h1>";
+  miDiv.innerHTML = "<h1>Este texto no lo escribio Omar Adrian Garcia Maya, lo escribio JavaScript</h1>";
 }
 </script>
 </body>
